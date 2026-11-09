@@ -112,7 +112,7 @@
   add('Hi! Ask me about Alanoud\u2019s background, skills, or projects.', 'bot');
 
   // CV requests (Arabic or English) are answered on the page with a link to the real PDF.
-  var CV_URL = 'assets/Alanoud-Alotaibi-CV.pdf';
+  var CV_URL = 'Alanoud-Alotaibi-CV.pdf';
   function isCvRequest(text) {
     var t = text.toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
