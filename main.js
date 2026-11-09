@@ -38,6 +38,7 @@
   }
 
   // Project galleries
+  try {
   Array.prototype.forEach.call(document.querySelectorAll('[data-gallery]'), function (g) {
     var track = g.querySelector('.track');
     var prev = g.querySelector('.prev'), next = g.querySelector('.next');
@@ -59,6 +60,9 @@
     sync();
   });
 
+  } catch (err) {
+    console.warn('Project gallery initialization failed:', err);
+  }
   // Floating AI assistant chat, connected to the FastAPI backend on Render.
   // Contract of the FastAPI /chat route: POST {"question": "..."} returns {"answer": "..."}.
   var AGENT = {
